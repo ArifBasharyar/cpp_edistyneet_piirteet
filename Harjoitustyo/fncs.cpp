@@ -2,9 +2,8 @@
 
 bool search_within_string(const string *const str1, const string *const str2, size_t *const pos) {
     // Tarkistaa koot
-    if (str1->length() < str2->length()) {
+    if (str1->length() < str2->length())
         return false;
-    }
 
     // Etsii str2 str1:stä
     size_t temp = str1->find(*str2);
@@ -21,17 +20,15 @@ bool search_within_string(const string *const str1, const string *const str2, si
 
 bool search_within_string(const string *const str1, const string *const str2) {
     // Tarkista koot
-    if (str1->length() < str2->length()) {
+    if (str1->length() < str2->length())
         return false;
-    }
 
     // Etsi str2 str1:stä
     size_t temp = str1->find(*str2);
 
     // Jos kaikki mennyt hyvin muuttaa line_positionin arvon
-    if (temp != string::npos) {
+    if (temp != string::npos)
         return true;
-    }
 
     // Jos str2 ei löydy
     return false;
@@ -85,6 +82,7 @@ void read_file(const string *const str1, const string *const str2, const print_o
             // Jos halutaan tulostaa rivi, kun alennettu haku string löytyy
             else if (search_within_string(&temp2, &low_str) && !opt->r)
                 print_opt_lines(&occ, &opt->l, &line, &temp1);
+
         } else {
             // Jos halutaan tulostaa rivi, kun stringiä ei löydy
             if (!search_within_string(&temp1, str2) && opt->r)
