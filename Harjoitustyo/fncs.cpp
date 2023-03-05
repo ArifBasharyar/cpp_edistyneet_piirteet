@@ -98,6 +98,8 @@ void read_file(const string *const str1, const string *const str2, const print_o
         std::cout << "\nOccurrences of lines containing \"" << *str2 << "\": " << occ << "\n";
     if (opt->o && opt->r)
         std::cout << "\nOccurrences of lines NOT containing \"" << *str2 << "\": " << nocc << "\n";
+
+    infile.close();
 }
 
 void print_opt_lines(size_t *const ctr, const bool *const optl, const size_t *const num, const string *const str) {
