@@ -1,6 +1,6 @@
 #include<iostream>
-using cout;
-using cin;
+using std::cout;
+using std::cin;
 
 struct aika_ty {
 	int tunti;
@@ -8,7 +8,8 @@ struct aika_ty {
 	int sekuntti;
 };
 
-void vastaus(int &syote, int a_raja, int y_raja); void aika_vas(aika_ty *aika);
+void vastaus(int &syote, int a_raja, int y_raja); 
+void aika_vas(aika_ty *aika);
 void sekunnit_ajaksi(const int *const x, int *const a, int *const b, int *const c);
 int aika_sekunneiksi(const int *const a, const int *const b, const int *const c);
 bool varmista_vahennettavyys(aika_ty *a, aika_ty *b);
